@@ -1,0 +1,194 @@
+server is running on the port
+Database created successful
+Database connected
+Blog created: {
+  title: 'hello',
+  author: 'kagozi',
+  topictext: 'jfkjdkf',
+  description: 'fjkdjf',
+  _id: '65ddd26742d1ce449460d037',
+  __v: 0
+}
+65ddd26742d1ce449460d03b
+65ddd26742d1ce449460d03f
+65ddd26742d1ce449460d042
+{
+  "stats": {
+    "suites": 5,
+    "tests": 9,
+    "passes": 9,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-27T12:15:35.103Z",
+    "end": "2024-02-27T12:15:35.209Z",
+    "duration": 106
+  },
+  "tests": [
+    {
+      "title": "should create a new blog",
+      "fullTitle": "POST /blogss should create a new blog",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 38,
+      "currentRetry": 0,
+      "speed": "medium",
+      "err": {}
+    },
+    {
+      "title": "getting all the blogs",
+      "fullTitle": "GET /blogss getting all the blogs",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should delete an existing blog",
+      "fullTitle": "DELETE /blogss/:id should delete an existing blog",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 400 if the blog id is invalid",
+      "fullTitle": "DELETE /blogss/:id should return 400 if the blog id is invalid",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 4,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should delete all the blogs",
+      "fullTitle": "DELETE /blogss/:id should delete all the blogs",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 7,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should get an existing blog",
+      "fullTitle": "GET /blogss/:id should get an existing blog",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 400 if the blog id is invalid",
+      "fullTitle": "GET /blogss/:id should return 400 if the blog id is invalid",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 3,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should get an existing blog",
+      "fullTitle": "PATCH /blogss/:id should get an existing blog",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 400 if the blog id is invalid",
+      "fullTitle": "PATCH /blogss/:id should return 400 if the blog id is invalid",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 3,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ],
+  "pending": [],
+  "failures": [],
+  "passes": [
+    {
+      "title": "should create a new blog",
+      "fullTitle": "POST /blogss should create a new blog",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 38,
+      "currentRetry": 0,
+      "speed": "medium",
+      "err": {}
+    },
+    {
+      "title": "getting all the blogs",
+      "fullTitle": "GET /blogss getting all the blogs",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 8,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should delete an existing blog",
+      "fullTitle": "DELETE /blogss/:id should delete an existing blog",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 400 if the blog id is invalid",
+      "fullTitle": "DELETE /blogss/:id should return 400 if the blog id is invalid",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 4,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should delete all the blogs",
+      "fullTitle": "DELETE /blogss/:id should delete all the blogs",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 7,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should get an existing blog",
+      "fullTitle": "GET /blogss/:id should get an existing blog",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 400 if the blog id is invalid",
+      "fullTitle": "GET /blogss/:id should return 400 if the blog id is invalid",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 3,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should get an existing blog",
+      "fullTitle": "PATCH /blogss/:id should get an existing blog",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 5,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    },
+    {
+      "title": "should return 400 if the blog id is invalid",
+      "fullTitle": "PATCH /blogss/:id should return 400 if the blog id is invalid",
+      "file": "C:\\Users\\LEON\\Documents\\htmlfiles\\backend\\databases\\test.ts",
+      "duration": 3,
+      "currentRetry": 0,
+      "speed": "fast",
+      "err": {}
+    }
+  ]
+}

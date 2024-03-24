@@ -1,0 +1,82 @@
+{
+  "name": "databases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "database.js",
+  "scripts": {
+    "check": "mocha --reporter ./**.spec.ts",
+    "istanbul": "istanbul cover _mocha -- --recursive --require ts-node/register ./*.spec.ts ",
+    "commenttest": "nyc mocha --recursive --require ts-node/register ./*.spec.ts --exit ",
+    "test": "mocha -r ts-node/register ./*.spec.ts --exit",
+    "test:coverage": "nyc npm run test ",
+    "comment": "mocha --require ts-node/register 'test.ts'",
+    "comment1": "mocha --require ts-node/register --reporter json 'test.ts' > test-report.json",
+    "coverage": "nyc report --reporter=text-summary",
+    "coverage1": "nyc report --reporter=html && open coverage/index.html",
+    "dev": "nodemon --exec ts-node database.ts",
+    "start": "node javascript/database.js",
+    "build": "tsc -p .",
+    "hello": "istanbul cover _mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info",
+    "coveralls": "nyc mocha  --timeout 20000 --recursive --require ts-node/register ./*.spec.ts --exit  && cat ./coverage/lcov.info",
+    "cover": "istanbul cover _mocha --report lcovonly -- --recursive --require ts-node/register ./*.spec.ts --exit && cat ./coverage/lcov.info"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/swagger-ui-express": "^4.1.6",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "check-code-coverage": "^1.10.5",
+    "cors": "^2.8.5",
+    "decrypt": "^0.0.1",
+    "express": "^4.18.2",
+    "joi": "^17.12.2",
+    "jsonwebtoken": "^9.0.2",
+    "mockgoose": "^8.0.4",
+    "mongoose": "^8.1.2",
+    "nodemailer": "^6.9.10",
+    "nodemon": "^3.0.3",
+    "sinon-chai": "^3.7.0",
+    "supertest": "^6.3.4",
+    "swagger-ui-express": "^5.0.0",
+    "yamljs": "^0.3.0"
+  },
+  "devDependencies": {
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
+    "@types/bcrypt": "^5.0.2",
+    "@types/chai": "^4.3.12",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.20",
+    "@types/sinon": "^17.0.3",
+    "@types/supertest": "^6.0.2",
+    "@types/yamljs": "^0.2.34",
+    "coveralls": "^3.1.1",
+    "coveralls-next": "^4.2.0",
+    "istanbul": "^0.4.5",
+    "jest": "^29.7.0",
+    "mocha": "^10.3.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "nyc": "^15.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "nyc": {
+    "extends": "@istanbuljs/nyc-config-typescript",
+    "check-coverage": false,
+    "all": true,
+    "include": [
+      "*.ts",
+      "**/*.ts"
+    ],
+    "reporter": [
+      "html",
+      "lcov",
+      "text",
+      "text-summary"
+    ],
+    "report-dir": "coverage"
+  }
+}

@@ -1,0 +1,526 @@
+# swagger: '2.0'
+# info:
+#   version: 1.0.0
+#   title: API Documentation
+#   description: Documentation for managing messages and blogs
+# securityDefinitions:
+#   bearerAuth:
+#     type: apiKey
+#     name: Authorization
+#     in: header
+#     description: Use 'Bearer <token>' to authenticate requests.
+
+# paths:
+#   /blogss:
+#     post:
+#       summary: Create a new blog
+#       description: Creates a new blog.
+#       operationId: createBlog
+#       parameters:
+#         - name: body
+#           in: body
+#           description: Blog object
+#           required: true
+#           schema:
+#             $ref: '#/definitions/Blog'
+#       responses:
+#         '201':
+#           description: Created
+#         '500':
+#           description: Internal Server Error
+#       tags:
+#         - Blogs
+#       security:
+#         - bearerAuth: []
+
+# definitions:
+#   Blog:
+#     type: object
+#     properties:
+#       title:
+#         type: string
+#       author:
+#         type: string
+#       topictext:
+#         type: string
+#       description:
+#         type: string
+#     required:
+#       - title
+#       - author
+#       - topictext
+#       - description
+
+# swagger: '2.0'
+# info:
+#   version: 1.0.0
+#   title: API Documentation
+#   description: Documentation for managing messages and blogs
+# paths:
+#   /messages:
+#     post:
+#       summary: Create a new message
+#       description: Creates a new message.
+#       operationId: createMessage
+#       parameters:
+#         - name: body
+#           in: body
+#           description: Message object
+#           required: true
+#           schema:
+#             $ref: '#/definitions/Message'
+#       responses:
+#         '201':
+#           description: Created
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Messages
+#      get:
+#        summary: Get all messages
+#        description: Retrieves all messages stored in the system.
+#       responses:
+#         '200':
+#           description: OK
+#           schema:
+#             type: array
+#             items:
+#               $ref: '#/definitions/Message'
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Messages
+#   /messages/{id}:
+#     get:
+#       summary: Get message by ID
+#       description: Retrieves a message by its ID.
+#       parameters:
+#         - name: id
+#           in: path
+#           required: true
+#           type: string
+#       responses:
+#         '200':
+#           description: OK
+#           schema:
+#             $ref: '#/definitions/Message'
+#         '404':
+#           description: Message not found.
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Messages
+#     patch:
+#       summary: Update message by ID
+#       description: Updates a message by its ID.
+#       parameters:
+#         - name: id
+#           in: path
+#           required: true
+#           type: string
+#         - name: body
+#           in: body
+#           description: Updated message object
+#           required: true
+#           schema:
+#             $ref: '#/definitions/Message'
+#       responses:
+#         '200':
+#           description: OK
+#         '404':
+#           description: Message not found.
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Messages
+#     delete:
+#       summary: Delete message by ID
+#       description: Deletes a message by its ID.
+#       parameters:
+#         - name: id
+#           in: path
+#           required: true
+#           type: string
+#       responses:
+#         '200':
+#           description: OK
+#         '404':
+#           description: Message not found.
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Messages
+#   /blogss:
+#     post:
+#       summary: Create a new blog entry
+#       description: Creates a new blog entry.
+#       operationId: createBlogEntry
+#       parameters:
+#         - name: body
+#           in: body
+#           description: Blog object
+#           required: true
+#           schema:
+#             $ref: '#/definitions/Blog'
+#       responses:
+#         '201':
+#           description: Created
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Blogs
+#     get:
+#       summary: Get all blogs
+#       description: Retrieves all blogs stored in the system.
+#       responses:
+#         '200':
+#           description: OK
+#           schema:
+#             type: array
+#             items:
+#               $ref: '#/definitions/Blog'
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Blogs
+#   /blogss/{id}:
+#     get:
+#       summary: Get blog by ID
+#       description: Retrieves a blog by its ID.
+#       parameters:
+#         - name: id
+#           in: path
+#           required: true
+#           type: string
+#       responses:
+#         '200':
+#           description: OK
+#           schema:
+#             $ref: '#/definitions/Blog'
+#         '404':
+#           description: Blog not found.
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Blogs
+#     patch:
+#       summary: Update blog by ID
+#       description: Updates a blog by its ID.
+#       parameters:
+#         - name: id
+#           in: path
+#           required: true
+#           type: string
+#         - name: body
+#           in: body
+#           description: Updated blog object
+#           required: true
+#           schema:
+#             $ref: '#/definitions/Blog'
+#       responses:
+#         '200':
+#           description: OK
+#         '404':
+#           description: Blog not found.
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Blogs
+#     delete:
+#       summary: Delete blog by ID
+#       description: Deletes a blog by its ID.
+#       parameters:
+#         - name: id
+#           in: path
+#           required: true
+#           type: string
+#       responses:
+#         '200':
+#           description: OK
+#         '404':
+#           description: Blog not found.
+#         '500':
+#           description: Internal Server Error.
+#       tags:
+#         - Blogs
+# definitions:
+#   Message:
+#     type: object
+#     properties:
+#       firstname:
+#         type: string
+#       lastname:
+#         type: string
+#       email:
+#         type: string
+#       subject:
+#         type: string
+#       description:
+#         type: string
+#   Blog:
+#     type: object
+#     properties:
+#       title:
+#         type: string
+#       author:
+#         type: string
+#       topictext:
+#         type: string
+#       description:
+#  
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: API Documentation
+  description: Documentation for managing messages and blogs
+
+securityDefinitions:
+  bearerAuth:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: Use 'Bearer <token>' to authenticate requests.
+
+paths:
+  /user/signup:
+    post:
+      summary: Register a new user
+      description: Registers a new user with email and password
+      parameters:
+        - name: body
+          in: body
+          description: User credentials
+          required: true
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+              password:
+                type: string
+      responses:
+        '201':
+          description: User registered successfully
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        '409':
+          description: User with provided email already exists
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        '500':
+          description: Internal Server Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+
+  /user/login:
+    post:
+      summary: Authenticate user
+      description: Authenticate user with email and password and return JWT token
+      parameters:
+        - name: body
+          in: body
+          description: User credentials
+          required: true
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+              password:
+                type: string
+      responses:
+        '201':
+          description: User authenticated successfully
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+              yourtoken:
+                type: string
+        '401':
+          description: Authentication failed (invalid credentials)
+          schema:
+            type: object
+            properties:
+              message:
+                type: string
+        '500':
+          description: Internal Server Error
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+  /messages:
+    post:
+      summary: Create a new message
+      description: Creates a new message.
+      operationId: createMessage
+      parameters:
+        - name: body
+          in: body
+          description: Message object
+          required: true
+          schema:
+            $ref: '#/definitions/Message'
+      responses:
+        '201':
+          description: Created
+        '500':
+          description: Internal Server Error
+      tags:
+        - Messages
+
+    get:
+      summary: Get all messages
+      description: Retrieves all messages stored in the system.
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Message'
+        '500':
+          description: Internal Server Error.
+      tags:
+        - Messages
+
+  /blogss:
+    post:
+      summary: Create a new blog
+      description: Creates a new blog.
+      operationId: createBlog
+      parameters:
+        - name: body
+          in: body
+          description: Blog object
+          required: true
+          schema:
+            $ref: '#/definitions/Blog'
+      responses:
+        '201':
+          description: Created
+        '500':
+          description: Internal Server Error
+      tags:
+        - Blogs
+      security:
+        - bearerAuth: []
+
+    get:
+      summary: Get all blogs
+      description: Retrieves all blogs stored in the system.
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Blog'
+        '500':
+          description: Internal Server Error.
+      tags:
+        - Blogs
+      security:
+        - bearerAuth: []
+
+  /blogss/{id}:
+    get:
+      summary: Get blog by ID
+      description: Retrieves a blog by its ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Blog'
+        '404':
+          description: Blog not found.
+        '500':
+          description: Internal Server Error.
+      tags:
+        - Blogs
+
+    patch:
+      summary: Update blog by ID
+      description: Updates a blog by its ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          description: Updated blog object
+          required: true
+          schema:
+            $ref: '#/definitions/Blog'
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Blog not found.
+        '500':
+          description: Internal Server Error.
+      tags:
+        - Blogs
+
+    delete:
+      summary: Delete blog by ID
+      description: Deletes a blog by its ID.
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Blog not found.
+        '500':
+          description: Internal Server Error.
+      tags:
+        - Blogs
+
+definitions:
+  Message:
+    type: object
+    properties:
+      firstname:
+        type: string
+      lastname:
+        type: string
+      email:
+        type: string
+      subject:
+        type: string
+      description:
+        type: string
+
+  Blog:
+    type: object
+    properties:
+      title:
+        type: string
+      author:
+        type: string
+      topictext:
+        type: string
+      description:
+        type: string
