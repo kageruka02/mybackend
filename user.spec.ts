@@ -183,7 +183,7 @@
 describe("POST /user/signup", () => {
   const timeout = 20000;
   it("should create a new user with valid credentials", async () => {
-    const mail = "ddffhjdm@gmail.com";
+    const mail = "ddffhjm@gmail.com";
     const response = await request(app)
       .post("/user/signup")
       .send({
