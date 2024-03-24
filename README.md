@@ -1,1 +1,1 @@
-[![Coverage Status](https://coveralls.io/repos/github/kageruka02/mybackend/badge.svg?branch=main)](https://coveralls.io/github/kageruka02/mybackend?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/kageruka03/backend/badge.png?branch=testing&kill_cache=1)](https://coveralls.io/github/kageruka03/backend?branch=testing)
